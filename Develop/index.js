@@ -54,7 +54,7 @@ inquirer.prompt([
         if(error) {
             console.log(error);
         } else {
-            console.log("response saved to HTML")
+            console.log("README created!")
         }
     })
 })
