@@ -15,4 +15,3 @@ A simple way to create a professional README file within your terminal!
 - Answer the questions given to you.
 - Navigate to your newly created README file.
 
-<img src="./photos/website.png" alt="Website functionality">

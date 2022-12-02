@@ -10,7 +10,7 @@ inquirer.prompt([
 
 {
     name:"license",
-    message:"What is your project name?",
+    message:"What license are you using for your project?",
     type:"list",
     choices:["MIT","Apache","Mozilla"]
 },    
@@ -34,14 +34,26 @@ inquirer.prompt([
 },
 
 {
-    name:"solution",
-    message:"How will you solve it?",
+    name:"features",
+    message:"What features are offered with this application?",
     type:"input",
 },
 
 {
     name:"usage",
     message:"How do you use this application?",
+    type:"input",
+},
+
+{
+    name:"credits",
+    message:"Please credit any sources used for your application",
+    type:"input",
+},
+
+{
+    name:"deployed",
+    message:"Please insert a link to your deployed application",
     type:"input",
 }
 
@@ -50,7 +62,7 @@ inquirer.prompt([
 .then(response=>{
     console.log(response)
     const result=generateMarkdown(response)
-    fs.writeFile("README.md",result,error=>{
+    fs.writeFile("NewREADME.md",result,error=>{
         if(error) {
             console.log(error);
         } else {

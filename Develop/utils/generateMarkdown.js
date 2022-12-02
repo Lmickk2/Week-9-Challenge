@@ -10,10 +10,18 @@ const generateMarkdown=(response) => {
 
   # User Story
   - ${response.story}
-  - ${response.solution}
+
+  # Features
+  - ${response.features}
 
   # Usage
   - ${response.usage}
+
+  # Credits
+  - ${response.credits}
+
+  # Deployed Application
+  - ${response.deployed}
 
   # License
   - ${response.license}
