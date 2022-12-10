@@ -1,6 +1,6 @@
 
 
-  # Project
+  # Cool Project
 
   - 
 
@@ -17,29 +17,29 @@
   * [License](#license)
 
   ## Description
-  - General desc
+  - a brief description
 
   ## User Story
-  - 
+  - many issues
 
   ## Features
-  - 
+  - features
 
   ## Usage
-  - wgr
+  - by using it
 
   ## Instructions
-  - wegf
+  - installation
 
   ## Credits
-  - wefwefewfwe
+  - credit1
 
   ## Creator Info
-  - 
-  - 
+  - Lmickk2
+  - email@email.com
 
   ## Deployed Application
-  - 
+  - link.com
 
   ## License
   - MIT
