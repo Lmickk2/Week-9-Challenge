@@ -1,34 +1,84 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+const licenses = ["MIT","Apache","Mozilla"];
+
+function licenseBadge(license) {
+  if(license === license[0]) {
+    return "https://img.shields.io/badge/License-MIT-blue.svg"
+  }
+  else if(license === license[1]) {
+    return "https://img.shields.io/badge/License-Apache-orange.svg"
+  }
+  else if(license === license[2]) {
+    return "https://img.shields.io/badge/License-Mozilla-green.svg"
+  }
+  else {
+    return ""
+  }
+}
+
+function licenseLink(license) {
+  if(license === "MIT") {
+    return "https://opensource.org/licenses/MIT"
+  }
+  else if(license === "Apache") {
+    return "https://opensource.org/licenses/Apache-2.0"
+  }
+  else if(license === "Mozilla") {
+    return "https://opensource.org/licenses/MPL-2.0"
+  }
+  else {
+    return ""
+  }
+}
+
+
 const generateMarkdown=(response) => {
   return `
 
   # ${response.title}
 
-  # Description
+  - ${licenseBadge(response.license)}
+
+  ## Table of Contents
+
+  * [Description](#description)
+  * [User Story](#story)
+  * [Features](#features)
+  * [Usage](#usage)
+  * [Instructions](#instructions)
+  * [Credits](#credits)
+  * [Creator Info](#github)
+  * [Deployed Application](#deployed)
+  * [License](#license)
+
+  ## Description
   - ${response.desc}
 
-  # User Story
+  ## User Story
   - ${response.story}
 
-  # Features
+  ## Features
   - ${response.features}
 
-  # Usage
+  ## Usage
   - ${response.usage}
 
-  # Credits
+  ## Instructions
+  - ${response.instructions}
+
+  ## Credits
   - ${response.credits}
 
-  # Deployed Application
+  ## Creator Info
+  - ${response.github}
+  - ${response.email}
+
+  ## Deployed Application
   - ${response.deployed}
 
-  # License
+  ## License
   - ${response.license}
-
+  - ${licenseLink(response.license)}
 `
 }
 
-
-// TODO: Create a function to generate markdown for README *
 module.exports=generateMarkdown

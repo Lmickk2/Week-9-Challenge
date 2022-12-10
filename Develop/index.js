@@ -1,10 +1,7 @@
-// TODO: Include packages needed for this application
-
 const fs=require("fs")
 const generateMarkdown=require("./utils/generateMarkdown")
 const inquirer=require("inquirer");
 
-// TODO: Create an array of questions for user input
 
 inquirer.prompt([
 
@@ -46,8 +43,26 @@ inquirer.prompt([
 },
 
 {
+    name:"instructions",
+    message:"how do you install this application",
+    type:"input",
+},
+
+{
     name:"credits",
     message:"Please credit any sources used for your application",
+    type:"input",
+},
+
+{
+    name:"github",
+    message:"What is your Github username?",
+    type:"input",
+},
+
+{
+    name:"email",
+    message:"What is your email address?",
     type:"input",
 },
 
@@ -58,7 +73,7 @@ inquirer.prompt([
 }
 
 ])
-// TODO: Create a function to write README file
+
 .then(response=>{
     console.log(response)
     const result=generateMarkdown(response)
@@ -71,14 +86,12 @@ inquirer.prompt([
     })
 })
 
-// TODO: Create a function to initialize app
+
 function init() {
 
 
 
 }
 
-
-// Function call to initialize app
 init();
 
